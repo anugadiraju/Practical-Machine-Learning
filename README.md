@@ -15,12 +15,9 @@ They were asked to perform barbell lifts correctly and incorrectly in 5 differen
 More information is available from the website here: http://groupware.les.inf.puc-rio.br/har (see the section on the Weight Lifting Exercise Dataset). 
 Data 
 The training data for this project are available here: 
-    
-    https://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv
-
+     https://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv
 The test data are available here: 
-    
-    https://d396qusza40orc.cloudfront.net/predmachlearn/pml-testing.csv
+     https://d396qusza40orc.cloudfront.net/predmachlearn/pml-testing.csv
 
 The data for this project come from this source: http://groupware.les.inf.puc-rio.br/har. If you use the document you create 
 for this class for any purpose please cite them as they have been very generous in allowing their data to be used for this kind of assignment. 
@@ -44,7 +41,7 @@ Please submit your predictions in appropriate format to the programming assignme
 
 What this repo contains
 --------------------------------
-README.md   -- This file
-mlcourseProject.R   - The R code used for the course project
-mlCourseProject.Rmd  -- The R mark down file describing my analysis
-mlCourseProject.html   -- The compiled HTML file (R markdown compiled into a HTML file)
+*README.md   -- This file
+*mlcourseProject.R   - The R code used for the course project
+*mlCourseProject.Rmd  -- The R mark down file describing my analysis
+*mlCourseProject.html   -- The compiled HTML file (R markdown compiled into a HTML file)
