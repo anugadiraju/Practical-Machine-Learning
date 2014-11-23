@@ -40,8 +40,10 @@ HTML page can be viewed online (and you always want to make it easy on graders :
 Please submit your predictions in appropriate format to the programming assignment for automated grading. See the programming assignment for additional details. 
 
 What this repo contains
---------------------------------
-*README.md   -- This file
-*mlcourseProject.R   - The R code used for the course project
-*mlCourseProject.Rmd  -- The R mark down file describing my analysis
-*mlCourseProject.html   -- The compiled HTML file (R markdown compiled into a HTML file)
+------------------------
+
+    README.md   -- This file
+    mlcourseProject.R   - The R code used for the course project
+    mlCourseProject.Rmd  -- The R mark down file describing my analysis
+    mlCourseProject.html   -- The compiled HTML file (R markdown compiled into a HTML file)
+
