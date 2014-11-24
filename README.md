@@ -46,4 +46,7 @@ What this repo contains
     mlcourseProject.R   - The R code used for the course project
     mlCourseProject.Rmd  -- The R mark down file describing my analysis
     mlCourseProject.html   -- The compiled HTML file (R markdown compiled into a HTML file)
+    
+   The html on gh-pages site is here:  http://anugadiraju.github.io/Practical-Machine-Learning
+    
 
