@@ -78,7 +78,7 @@ Getting and cleaning Data
 
 ```r
     options(warn=-1)
-    setwd("C:/Users/agadiraju/Documents/RWorkingDir/Practical-Machine-Learning")
+    setwd("C:")
     if(!file.exists("data")) {
         dir.create("data")
     }
@@ -87,8 +87,8 @@ Getting and cleaning Data
 Get training data.
 
 ```r
-    #fileUrl2 <- "http://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv" 
-    #download.file(fileUrl2,destfile="./data/fitnessdata.csv")
+    fileUrl2 <- "http://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv" 
+    download.file(fileUrl2,destfile="./data/fitnessdata.csv")
     fitDT <- fread("./data/fitnessdata.csv",header=T,na.strings=c("NA","Not available"),colClasses="character")
     fitDT <- as.data.frame(fitDT)
 ```
@@ -113,8 +113,8 @@ We examine the data set and columns. We will remove columns not used in predicti
  Get and cleanup test data similar to training data above.It is important to apply same preprocessing methodology to test set as well.
 
 ```r
-   #fileUrl1 <- "http://d396qusza40orc.cloudfront.net/predmachlearn/pml-testing.csv" 
-   #download.file(fileUrl1,destfile="./data/fittestdata.csv")
+   fileUrl1 <- "http://d396qusza40orc.cloudfront.net/predmachlearn/pml-testing.csv" 
+   download.file(fileUrl1,destfile="./data/fittestdata.csv")
    fitTestDT <- fread("./data/fittestdata.csv",header=T,na.strings=c("NA","Not available"),colClasses="character")
    fitTestDT <- as.data.frame(fitTestDT)
    cleanTDT <- fitTestDT[, -which(names(fitTestDT) %in% c("user_name","V1","raw_timestamp_part_1","raw_timestamp_part_2","cvtd_timestamp","new_window","num_window"))]
@@ -178,7 +178,7 @@ Building a Model
 
 ```
 ##           A           B           C           D           E 
-## 0.005398362 0.024793776 0.022633490 0.025139099 0.010670179
+## 0.005265104 0.023811753 0.022674768 0.018485351 0.009675402
 ```
     
 ### Fitting a randomforest model
@@ -207,14 +207,14 @@ Building a Model
 ##                      Number of trees: 200
 ## No. of variables tried at each split: 7
 ## 
-##         OOB estimate of  error rate: 1.9%
+##         OOB estimate of  error rate: 2%
 ## Confusion matrix:
-##      A    B   C   D    E class.error
-## A 1664    6   3   0    1 0.005973716
-## B   21 1110   9   0    0 0.026315789
-## C    0   20 996  10    1 0.030185005
-## D    0    0  28 936    1 0.030051813
-## E    0    0   5   7 1071 0.011080332
+##      A    B    C   D    E class.error
+## A 1667    6    1   0    0 0.004181601
+## B   26 1102   10   1    1 0.033333333
+## C    0   19 1005   1    2 0.021421616
+## D    3    0   32 926    4 0.040414508
+## E    0    1    6   5 1071 0.011080332
 ```
 
 ### Predicting on the model

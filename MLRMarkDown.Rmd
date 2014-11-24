@@ -32,7 +32,7 @@ Getting and cleaning Data
     library(caret)
     library(randomForest)
     options(warn=-1)
-    setwd("C:/Users/agadiraju/Documents/RWorkingDir/Practical-Machine-Learning")
+    setwd("C:")
     if(!file.exists("data")) {
         dir.create("data")
     }
@@ -41,8 +41,8 @@ Getting and cleaning Data
 
 Get training data.
 ```{r}
-    #fileUrl2 <- "http://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv" 
-    #download.file(fileUrl2,destfile="./data/fitnessdata.csv")
+    fileUrl2 <- "http://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv" 
+    download.file(fileUrl2,destfile="./data/fitnessdata.csv")
     fitDT <- fread("./data/fitnessdata.csv",header=T,na.strings=c("NA","Not available"),colClasses="character")
     fitDT <- as.data.frame(fitDT)
 ```
@@ -64,8 +64,8 @@ We examine the data set and columns. We will remove columns not used in predicti
    
  Get and cleanup test data similar to training data above.It is important to apply same preprocessing methodology to test set as well.
 ```{r}
-   #fileUrl1 <- "http://d396qusza40orc.cloudfront.net/predmachlearn/pml-testing.csv" 
-   #download.file(fileUrl1,destfile="./data/fittestdata.csv")
+   fileUrl1 <- "http://d396qusza40orc.cloudfront.net/predmachlearn/pml-testing.csv" 
+   download.file(fileUrl1,destfile="./data/fittestdata.csv")
    fitTestDT <- fread("./data/fittestdata.csv",header=T,na.strings=c("NA","Not available"),colClasses="character")
    fitTestDT <- as.data.frame(fitTestDT)
    cleanTDT <- fitTestDT[, -which(names(fitTestDT) %in% c("user_name","V1","raw_timestamp_part_1","raw_timestamp_part_2","cvtd_timestamp","new_window","num_window"))]
