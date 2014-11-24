@@ -40,7 +40,7 @@ predict1 <- function() {
     library(caret)
     library(randomForest)
     options(warn=-1)
-    setwd("C:/Users/agadiraju/Documents/RWorkingDir/Practical-Machine-Learning")
+    setwd("C:")
     if(!file.exists("data")) {
         dir.create("data")
     }
